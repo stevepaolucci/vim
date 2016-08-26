@@ -30,6 +30,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'mattn/emmet-vim'
 "Plugin 'vim-utils/vim-ruby-fold'
 call vundle#end()
 syntax on
@@ -69,6 +70,8 @@ nmap gb :CtrlPBuffer<CR>
 
 nmap <leader>ev :e ~/.vimrc<CR>
 nmap <leader>re :source ~/.vimrc<CR>
+
+nnoremap <Leader>, <esc>V:s/,/\r/g<cr>
 
 nmap <space> :w<CR>
 " ----------------------------------------------------------------------------
@@ -117,8 +120,12 @@ nnoremap g<left> :call WinMove('h')<cr>
 nnoremap g<right> :call WinMove('l')<cr>
 nnoremap g<down> :call WinMove('j')<cr>
 nnoremap g<up> :call WinMove('k')<cr>
+inoremap jj <ESC>
+nmap <C-a> ggVG
 "Add the pry debug line with \bp
 map <Leader>bp Orequire'pry';binding.pry<esc>:w<cr>
+"Add erb <%= %> with ,<
+map <Leader>< <esc>a<%=   %><esc>bhhha
 " ----------------------------------------------------------------------------
 " easymotion
 " ----------------------------------------------------------------------------
