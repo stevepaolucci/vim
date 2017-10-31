@@ -31,13 +31,18 @@ Plugin 'xolox/vim-easytags'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'mattn/emmet-vim'
-"Plugin 'vim-utils/vim-ruby-fold'
+Plugin 'ngmy/vim-rubocop'
+Plugin 'prettier/vim-prettier'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+" " Rubocop plugin specifying where to get rubocop rules from
+let g:vimrubocop_config = '.rubocop.yml'
 call vundle#end()
 syntax on
 filetype plugin indent on
-filetype plugin indent on
 set foldlevel=20
 set tags=./.tags;
+set ruler
 let g:easytags_dynamic_files=1
 set list
 set listchars=""
